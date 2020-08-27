@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  padding: 50px 0px;
+  font-family: sans-serif;
+  color: #333;
+  background: #e3eaf0;
+  #wrapper {
+    margin: 0 auto;
+    max-width: 960px;
+    min-width: 215px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 0px 10px #c4c9ce;
+    border-radius: 1em;
+    h1 {
+      margin: 10px 0px;
+    }
+    h2 {
+      margin: 20px 0px 10px 0px;
+    }
+    hr {
+      margin: 3px 0px 20px;
+      height: 1px;
+      background: #55bc79;
+      border: 0;
+    }
+    .invisible {
+      opacity: 0;
+    }
+    form {
+      .block {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .input-field {
+          max-width: 320px;
+          min-width: 230px;
+          min-height: 80px;
+          position: relative;
+          > * {
+            width: 80%;
+          }
+          select {
+            width: calc(80% + 16px);
+            cursor: pointer;
+          }
+          margin: 7px 0px;
+          flex: 33%;
+          p {
+            font-size: 16px;
+            margin: 2px;
+            color: #555;
+          }
+          .error_message {
+            min-height: 20px;
+            color: #ff5151;
+          }
+          &.required {
+            label::after {
+              margin-left: 4px;
+              position: absolute;
+              content: "*";
+              color: red;
+              font-size: 20px;
+              font-weight: bold;
+            }
+          }
+          &.error {
+            label {
+              color: #ff5151;
+            }
+            input {
+              border: 1px solid #ff7c7c !important;
+              box-shadow: 0px 0px 4px #ffadad;
+              background: #fff2f2;
+            }
+          }
+          select[multiple="multiple"] {
+            height: 78px;
+          }
+          .text {
+            margin: 5px 0px;
+            padding: 7px 7px;
+            color: grey;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            box-shadow: 1px 1px 4px #ccc;
+            border-radius: 5px;
+            outline: none;
+            transition: 0.4s ease;
+          }
+          .birthday {
+            width: calc(80% + 14px);
+            display: flex;
+            justify-content: space-between;
+            .day {
+              width: 15%;
+            }
+            .month {
+              width: 40%;
+            }
+            .year {
+              width: 20%;
+            }
+          }
+          .radio {
+            margin: 7px 0px;
+            padding: 7px;
+            background: #f4f6fa;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-around;
+            input {
+              margin: 0px 10px;
+              cursor: pointer;
+            }
+          }
+          .check {
+            position: absolute;
+            top: 24px;
+            padding: 7px;
+            margin: 5px 0px;
+            background: #f4f6fa;
+            border-radius: 5px;
+            input {
+              cursor: pointer;
+            }
+            span {
+              margin-left: 5px;
+            }
+          }
+          input[type="text"]:focus {
+            border: 1px solid #55bc79;
+            color: #333;
+          }
+        }
+      }
+      button {
+        border: 2px solid transparent;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 25px;
+        border-radius: 1.4em;
+        background: #55bc79;
+        color: white;
+        transition: 0.4s ease;
+        cursor: pointer;
+        outline: none;
+      }
+      button:hover {
+        border: 2px solid #55bc79;
+        background: transparent;
+        color: #55bc79;
+      }
+    }
+  }
+}
